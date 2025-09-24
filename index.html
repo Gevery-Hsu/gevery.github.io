@@ -1,11 +1,305 @@
-<p>你好</p>
-<p>我是徐个个</p>
-<p>如果你看到这里, 那你是真的厉害了~</p>
-<p>你可以在这些地方找到我</p>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>徐个个的个人网站 | 书影蘅谐 | 栗树咖啡馆 | 斜杠中年</title>
+    <meta name="description" content="徐个个的个人网站：提供高质量电子书、高清电影剧集、无损音乐专辑、有声书等资源下载，同时收录部分个人创作博客文章">
+    <meta name="keywords" content="个人主页,徐个个,Gevery,书影蘅谐,栗树咖啡馆,书影音,高清,无损,资源,电子书,电影,剧集,电视剧,音乐,有声书,专辑,下载,博客,咖啡,咖啡馆,个人网站,斜杠,中年">
+    <meta name="author" content="徐个个">
+    
+    <!-- 预连接关键外部资源 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://code.iconify.design">
+    
+    <!-- 浏览器标签页图标使用SVG格式 -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    
+    <!-- 引入Google Fonts思源宋体 - 仅包含需要的字重 -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap">
+    
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #2980b9;
+            --text-color: #323232;
+            --light-text: #888;
+            --background: #f8f9fa;
+            --card-bg: #ffffff;
+            --spacing: 1rem;
+            --border-radius: 12px;
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+            --base-font-size: 18px; /* 增大基础字体大小 */
+        }
 
-<ul>
-  <li> <a href="https://he.coffee/">栗树咖啡馆</a> </li>
-  <li> <a href="https://www.zhihu.com/people/xugevery">知乎</a> </li>
-  <li> <a href="https://www.douban.com/people/xuze/">豆瓣</a> </li>
-  <li> <a href="https://weibo.com/xugege">微博</a> </li>
-</ul>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-size: var(--base-font-size); /* 使用变量控制字体大小 */
+            font-family: 'Noto Serif SC', sans-serif;
+            line-height: 1.8;
+            color: var(--text-color);
+            background-color: var(--background);
+            padding-bottom: 3rem;
+        }
+
+        .container {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 0 var(--spacing);
+        }
+
+        header {
+            text-align: center;
+            padding: 4rem 1rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border-radius: 0 0 var(--border-radius) var(--border-radius);
+            margin-bottom: 3rem;
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            box-shadow: var(--shadow);
+            margin-bottom: 1.5rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.6rem;
+            margin-top: 1.6rem;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.6rem;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-5px);
+            opacity: 0.8;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        .about {
+            background-color: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            margin-bottom: 1.6rem;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.6rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 1.8rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1.6rem;
+            color: var(--text-color);
+        }
+
+        .card p {
+            color: var(--text-color);
+            margin-bottom: 1.2rem;
+            flex-grow: 1;
+        }
+
+        .card a {
+            display: inline-block;
+            padding: 0.6rem 1.6rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: var(--transition);
+            align-self: flex-start;
+        }
+
+        .card a:hover {
+            background-color: var(--secondary-color);
+        }
+
+        footer {
+            font-size: 1rem;
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            color: var(--light-text);
+            border-top: 1px solid #eee;
+        }
+
+        @media (max-width: 960px) {
+            :root {
+                --base-font-size: 16px; /* 在移动设备上使用稍小的基础字号 */
+            }
+            
+            header {
+                padding: 2rem 1rem;
+            }
+            
+            .avatar {
+                width: 80px;
+                height: 80px;
+            }
+            
+            h1 {
+                font-size: 1.6rem;
+            }
+            
+            .tagline {
+                font-size: 0.8rem;
+            }
+            
+            .social-links a {
+                font-size: 1rem;
+            }
+            
+            .card-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .about, .card {
+                padding: 1.6rem;
+            }
+        }
+    </style>
+        <!-- 百度统计 -->
+    <script>
+            var _hmt = _hmt || [];
+            (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?6552b1760a1ca1e4ef8d5bf19c54fa70";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+            })();
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <img src="https://pic.gevery.cn/touxiang.jpg" alt="头像" class="avatar" width="150" height="150">
+            <h1>徐个个</h1>
+            <p class="tagline">南京土著 | 读书人 | 咖啡控 | 资深运营</p>
+            <p class="tagline">相声票友 | 业余厨子 | 电影达人 | 篮球老炮</p>
+            <div class="social-links">
+                <!-- 使用Iconify图标，格式为 集合:图标名 -->
+                <a href="https://www.zhihu.com/people/xugevery" rel="nofollow noopener" target="_blank" title="知乎">
+                    <span class="iconify" data-icon="simple-icons:zhihu"></span>
+                </a>
+                <a href="https://www.douban.com/people/3787033/" rel="nofollow noopener" target="_blank" title="豆瓣">
+                    <span class="iconify" data-icon="simple-icons:douban"></span>
+                </a>
+                <a href="https://weibo.com/xugege" rel="nofollow noopener" target="_blank" title="微博">
+                    <span class="iconify" data-icon="simple-icons:sinaweibo"></span>
+                </a>
+                <a href="https://space.bilibili.com/24713636" rel="nofollow noopener" target="_blank" title="Bilibili">
+                    <span class="iconify" data-icon="simple-icons:bilibili"></span>
+                </a>
+                <a href="https://www.douyin.com/user/MS4wLjABAAAAz9Of-gm_YBrRQsy8F6aelTOfCAVK_J7wZTnEeeqFZkn7RGhaqm-Fg7xBQRkqKXJS" rel="nofollow noopener" target="_blank" title="抖音">
+                    <span class="iconify" data-icon="simple-icons:tiktok"></span>
+                </a>
+                <a href="https://www.youtube.com/@GeveryXu" rel="nofollow noopener" target="_blank" title="Youtube">
+                    <span class="iconify" data-icon="simple-icons:youtube"></span>
+                </a>
+            </div>
+        </header>
+
+        <section class="about">
+            <h2>关于我</h2>
+            <p style="margin-bottom: 1.2rem;">不容易啊~恭喜你找到这里，你很有眼光！</p>
+            <p style="margin-bottom: 1.2rem;">我是徐个个，斜杠中年，大多数时间居住在南京。</p>
+            <p style="margin-bottom: 1.2rem;">我对读书、写作、电影、体育、音乐、相声、播客、游戏、美食等等都有广泛的兴趣。</p>
+            <p style="margin-bottom: 1.2rem;">作为赛博仓鼠症重度患者，我屯积了大量书影音资源，以及其他一些杂七杂八的东西；我写文章、拍视频，创作的内容散落在各处，这些都将通过这个网站整合在一起。</p>
+            <p style="margin-bottom: 1.2rem;">我还曾开过一家咖啡馆，名为“栗树咖啡馆”，这家店目前暂存在我的脑中和网络的某些地方，未来有一天我还会再把实体店开起来。</p>
+            <p>最后，再次正式欢迎你光临，请随便逛逛，不要拘谨，祝你愉快~</p>
+        </section>
+
+        <section class="cards-section">
+            <h2>这里有</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>书影蘅谐</h3>
+                    <p>查看我收集并分享的优质书影音资源，或阅读我的博客</p>
+                    <a href="https://blog.gevery.cn/" target="_blank" rel="noopener">查看资源</a>
+                </div>
+                <div class="card">
+                    <h3>书影说说</h3>
+                    <p>讨论书影音及任何你感兴趣的话题，或对本站提出意见建议</p>
+                    <a href="https://bb.gevery.cn/" target="_blank" rel="noopener">参与讨论</a>
+                </div>
+                <div class="card">
+                    <h3>网址导航</h3>
+                    <p>个人收集整理并长期使用的Chrome浏览器书签，仅供参考</p>
+                    <a href="https://blog.gevery.cn/ge123/" target="_blank" rel="noopener">前往使用</a>
+                </div>
+                <div class="card">
+                    <h3>进站必读</h3>
+                    <p>使用本站任何功能和内容前，建议先仔细阅读这篇说明</p>
+                    <a href="https://blog.gevery.cn/blog/readme.html" target="_blank" rel="noopener">点击阅读</a>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2025 徐个个 | 保留所有权利</p>
+        </footer>
+    </div>
+    
+    <!-- 引入Iconify（替换Tabler Icons） -->
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    
+    </body>
+</html>
